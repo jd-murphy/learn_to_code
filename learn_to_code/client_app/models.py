@@ -10,10 +10,17 @@ class Lesson(models.Model):
         return self.name
 
 
+class Badge(models.Model):
+    name = models.CharField(max_length=30, default="Not set")
+    icon = models.ImageField(upload_to="badges")
+    lesson_requirement = models.IntegerField(default=1)
+
+
 class ClientProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     current_lesson = models.CharField(max_length=30, blank=True)
     completed_lessons = models.TextField(blank=True)
+    badges_earned = models.TextField(blank=True)
 
     def __str__(self):
         return self.user.username
