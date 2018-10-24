@@ -12,8 +12,26 @@
                 {% include lesson %}
 
                 <div class="row mt-5">
-                    <div class="col offset-md-1">
-                        <a class="btn btn-info" href="{% url 'client_app:client_code' %}" id="next_lesson_btn">Next Lesson ></a>
+                        <div class="col-3 offset-md-1">
+                            <a class="btn btn-outline-primary" href="#" id="success_button"> I got it to work!</a>
+                        </div>
+                        <div class="col-3 offset-md-1">
+                            <a class="btn btn-outline-danger" href="#" id="help_button"> I need help!</a>
+                        </div>
+                    </div>
+
+                <div class="row mt-5">
+                    <div class="col-3 offset-md-1">
+                        {% if lesson_number > 1 %}
+                            <a class="btn btn-info" href="{% url 'client_app:client_code' %}" id="previous_lesson_btn">< Back&nbsp;&nbsp;</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-3">
+                        {% if lesson_number != last_lesson %}
+                            <a class="btn btn-info" href="{% url 'client_app:client_code' %}" id="next_lesson_btn">&nbsp;&nbsp;Next ></a>
+                        {% else %}
+                        <a class="btn btn-info" href="{% url 'client_app:client_lessons' %}">&nbsp;&nbsp;More lessons coming soon!</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -25,5 +43,6 @@
 {% endblock %}
 
 {% block custom_script %}
+    <script src="{% static 'client_app/js-cookie.js' %}"></script>
     <script src="{% static 'client_app/myjs.js' %}"></script>
 {% endblock %}

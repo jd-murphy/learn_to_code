@@ -9,6 +9,22 @@
         <div class="row mt-5">
             <div class="col-5">
                 <h1>Lessons</h1>
+                <ul>
+                    {% for lesson in lessons %}
+                        <li class="mt-5">
+                            {% if lesson.number in completed_lessons %}
+                                <img src="{% static 'images/completed.png' %}" alt="completed lesson" class="mr-3"><a href="{% url 'client_app:lesson_detail' lesson.number %}"><h5 class="pt-1">{{ lesson.number }}. {{ lesson.name }}</h5></a>
+                            {% else %}
+                                <img src="{% static 'images/incomplete.png' %}" alt="lesson not yet completed" class="mr-3"><a href="{% url 'client_app:lesson_detail' lesson.number %}"><h5 class="pt-1">{{ lesson.number }}. {{ lesson.name }}</h5></a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-3 justify-content-center">
+                <a class="btn btn-info" href="{% url 'client_app:client_reset_progress' %}">Reset progress</a>
             </div>
         </div>
     </div>
