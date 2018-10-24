@@ -1,0 +1,22 @@
+{% extends 'client_app/base.html' %}
+{% block title_block %}
+<title>Learn 2 Code! | Login</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="jumbotron">
+        <h1>Login</h1>
+        <h3>Log in to get started coding!</h3>
+    </div>
+    <div class="container">
+        <h1>Login</h1>
+        <p>If you are not already signed up, <a href="{% url 'client_app:client_registration' %}">sign up here</a>, it's free!</p>
+        <form action="{% url 'client_app:client_login' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Enter Username...">
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            <input type="submit" class="btn btn-success" value="Login">
+        </form>
+    </div>
+{% endblock %}

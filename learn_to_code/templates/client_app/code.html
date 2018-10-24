@@ -1,0 +1,29 @@
+{% extends 'client_app/base.html' %}
+{% load static %}
+{% block title_block %}
+<title>Learn 2 Code! | Code</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-5">
+                
+                {% include lesson %}
+
+                <div class="row mt-5">
+                    <div class="col offset-md-1">
+                        <a class="btn btn-info" href="{% url 'client_app:client_code' %}" id="next_lesson_btn">Next Lesson ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                    <iframe height="600px" width="100%" src="https://repl.it/@jdmurphy/AcrobaticDeficientWebportal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_script %}
+    <script src="{% static 'client_app/myjs.js' %}"></script>
+{% endblock %}
