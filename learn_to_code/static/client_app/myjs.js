@@ -28,8 +28,15 @@ $(document).ready(function(){
                 "lesson_number": lesson_number
             }
         }).done(function() {
+            $('.feedback_buttons').addClass('hide_me');
+            $('#success_message').removeClass('hide_me');
+            $('#help_message').addClass('hide_me');
             console.log('Lesson ' + lesson_number + ' marked as complete!')
         });
     });
 
+    $('#help_button').click(function() {
+        $('#help_message').removeClass('hide_me');
+        $('#help_button').addClass('hide_me');
+    });
 })

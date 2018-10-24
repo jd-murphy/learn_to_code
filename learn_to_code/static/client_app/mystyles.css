@@ -9,3 +9,6 @@ ul li img {
     width: 2rem;
     height: 2rem;
 }
+.hide_me {
+    display: none;
+}
