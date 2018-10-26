@@ -5,12 +5,17 @@
 
 {% block body_block %}
     <div class="jumbotron">
-        <h1>Sign Up and Learn 2 Code!</h1>
-        <h3>It's free to sign up... You can be writing code 60 seconds from now!</h3>
+        <div class="jumbo_text">
+            <h1>Sign Up and Learn 2 Code!</h1>
+            <h3>You can be writing code in 60 seconds!</h3>
+        </div>
     </div>
     <div class="container">
         {% if registered %}
-            <h1>Thanks for signing up! We're so excited you've joined us. This is going to be awesome. Login to start coding!</h1>
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Welcome!</strong> You're signed up. <a href="{% url 'client_app:client_login' %}" class="alert-link">Click here to log in to get started coding!</a>
+              </div>
         {% else %}
             <h1>Sign up now!</h1>
             <h3>Just fill out this form:</h3>

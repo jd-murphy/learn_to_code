@@ -49,7 +49,7 @@ def client_login(request):
         else:
             print('Login failed.')
             print(f"Username: {username}  Password: {password}")
-            return HttpResponse('Invalid login credentials!')
+            return render(request, 'client_app/login.html', { 'error': 'Unsuccessful login attempt.' })
     else:
         return render(request, 'client_app/login.html')
 

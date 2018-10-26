@@ -1,5 +1,6 @@
 h1 {
-    color: royalblue;
+    color: rgba(123, 193, 173, .9);
+    font-weight: medium;
 }
 ul li {
     list-style: none;
@@ -11,4 +12,27 @@ ul li img {
 }
 .hide_me {
     display: none;
+}
+.jumbotron {
+    background: url("../images/cover_photo.jpg") no-repeat center center;
+    background-size: 100% auto;
+    height: 500px;
+    border-radius: 0;
+
+}
+.jumbo_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    width: 90%;
+    margin-top: 5rem;
+    padding-left: 10%;
+    background-color: whitesmoke;
+    opacity: .8;
+}
+.footer {
+    padding: 5rem;
+    background-color: whitesmoke;
+    opacity: .8;
 }
