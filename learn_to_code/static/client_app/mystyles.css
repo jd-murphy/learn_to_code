@@ -2,6 +2,10 @@ h1 {
     color: rgba(123, 193, 173, .9);
     font-weight: medium;
 }
+.brand_link {
+    color: rgba(123, 193, 173, .9);
+    font-weight: bold;
+}
 ul li {
     list-style: none;
 }
@@ -20,19 +24,24 @@ ul li img {
     border-radius: 0;
 
 }
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;  
+}
 .jumbo_text {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 200px;
-    width: 90%;
+    width: 80%;
     margin-top: 5rem;
     padding-left: 10%;
     background-color: whitesmoke;
-    opacity: .8;
+    opacity: .9;
 }
 .footer {
     padding: 5rem;
     background-color: whitesmoke;
-    opacity: .8;
+    opacity: .9;
 }

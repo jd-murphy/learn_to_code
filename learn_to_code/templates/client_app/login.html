@@ -1,4 +1,5 @@
 {% extends 'client_app/base.html' %}
+{% load static %}
 {% block title_block %}
 <title>Learn 2 Code! | Login</title>
 {% endblock %}
@@ -6,15 +7,22 @@
 {% block body_block %}
     <div class="jumbotron">
         <div class="jumbo_text">
-            <h1>Login</h1>
-            <h3>Log in to get started coding!</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <h1>Login</h1>
+                    <h3>Log in to start coding!</h3>
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static 'images/python_logo.png' %}" class="img-responsive mt-3" alt="Python Logo">
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
         {% if error %}
             <div class="alert alert-dismissible alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Uh oh!</strong> That doesn't seem to be the right login credentials. Try again!
+                <strong>Uh oh!</strong> That doesn't seem to be the correct login credentials. Try again!
             </div>
         {% endif %}
         <h1>Login</h1>
