@@ -1,25 +1,33 @@
 <h1>Lesson 14</h1>
-<h2>Variables are awesome!</h2>
+<h2>result = result + 1</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    to use a variable to store information and 
+    how to get information back out of it. We can even use a variable to change itself like this
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        result = 2<br>
+        result = result + 1<br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+<p>But these kinds of operations are a special case, and so we have another special way to write it. 
+    If you need to change the variable by a number, you can use this short notation.
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        result += 1<br>
+        result -= 2<br>
+        result /= 3<br>
+        result *= 0.5<br>
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>These can be confusing, but they are just a short way to use the variable to change itself. 
+    You can think of <b>result += 1</b> as "<b>increase</b> the variable <b>result</b> by <b>1</b>"
+    and think of <b>result -= 2</b> as "<b>decrease</b> the variable <b>result</b> by <b>2</b>"
+    The most common way you will see this is the <b>+= 1</b> scenario and sometimes the <b>-= 1</b> scenario. <br>
+    <div class="pt-3 pb-3 pl-5">
+        <em><b>Your variable must have a value BEFORE you do this or you will get an error!</b></em>
+    </div>
+</p>
 
 <input type="hidden" id="lesson_number" value="14">

@@ -1,25 +1,35 @@
 <h1>Lesson 13</h1>
-<h2>Variables are awesome!</h2>
+<h2>four = 14 + 93 ?!?!?!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we've got to try 
+    something a little crazy here to prove a point. 
+    Let's say we want to name our variable <b>four</b>.
+    Technically, it is totally <em>legal</em> in python to 
+    name a variable <b>four</b>. It might even <em>seem</em> like a good 
+    idea if, for example, we need to save the answer to the question <b>2 + 2</b>. Like this
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        four = 2 + 2<br>
+        print(four)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+<p>Seems good right? And even if we do this</p> 
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        four = 16 / 4<br>
+        print(four)
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>But be careful, because this is just as <em>legal</em> but can get <em>very confusing very quickly</em>.</p>
+<div class="mt-3 mb-3 ml-5">
+        <code>
+            four = 983 / 23.4<br>
+            print(four)
+        </code>
+    </div>
+<p>😬 YIKES! Now the name of our variable is not accurately 
+    describing the information it holds. This is something 
+    a good coder avoids at all costs! Better to name the variable <b>answer</b> or <b>result</b>.</p>
 
 <input type="hidden" id="lesson_number" value="13">

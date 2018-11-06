@@ -1,25 +1,33 @@
 <h1>Lesson 18</h1>
-<h2>Variables are awesome!</h2>
+<h2>Which is less?</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    to check if something is greater than something, but what about checking 
+    to see if a thing is less that another thing? We can ask if the thing 
+    on the left is less than the thing on the right. We will use <b> < </b> 
+    to ask python to check for less than. Is 5 less than 16? Yes. Python will say this is <b>True</b>.
+    Is 16 less than 5? Nope. So python says <b>False</b>.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
+        result = 5 < 16<br>
+        print(result)<br>
+        result = 16 < 5<br>
         print(result)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>A special thing to watch out for with <b> > </b> and <b> < </b> is to realize that
+when something is equal, it is not less than or greater than. So 5 and 5 can be compared 
+with <b> > </b> or <b> < </b> but we will always get <b>False</b>.</p>
+<div class="mt-3 mb-5 ml-5">
+        <code>
+            result = 5 < 5<br>
+            print(result)<br>
+            result = 5 > 5<br>
+            print(result)
+        </code>
+    </div>
+
+
 
 <input type="hidden" id="lesson_number" value="18">

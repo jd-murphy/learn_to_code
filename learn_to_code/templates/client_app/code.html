@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block body_block %}
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-5">
+    
+        <div class="row main-content">
+            <div class="col-6">
                 
                 {% include lesson %}
 
-                <div class="row mt-5 feedback_buttons">
+                <div class="row mt-3 feedback_buttons">
                     <div class="col-3 offset-md-1">
                         <a class="btn btn-outline-primary" href="#" id="success_button"> I got it to work!</a>
                     </div>
@@ -19,7 +19,7 @@
                         <a class="btn btn-outline-danger" href="#" id="help_button"> I need help!</a>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-3">
                     <div id="success_message" class="hide_me">
                         <h4> 🎉 Way to go! 🎉 </h4>
                         <h5>Go on to the next lesson when you're ready! 😎 </h5>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
+                <div class="row mt-3">
                     <div class="col-3 offset-md-1">
                         {% if lesson_number > 1 %}
                             <a class="btn btn-info" href="{% url 'client_app:client_code' %}" id="previous_lesson_btn">< Back&nbsp;&nbsp;</a>
@@ -47,10 +47,10 @@
                 </div>
             </div>
             <div class="col">
-                <iframe height="600px" width="100%" src="https://repl.it/@jdmurphy/AcrobaticDeficientWebportal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                <iframe id="repl" height="600px" width="100%" src="https://repl.it/@jdmurphy/AcrobaticDeficientWebportal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </div>
         </div>
-    </div>
+    
 {% endblock %}
 
 {% block custom_script %}

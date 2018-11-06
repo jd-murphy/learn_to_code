@@ -45,3 +45,7 @@ img {
     background-color: whitesmoke;
     opacity: .9;
 }
+
+.main-content {
+    padding: 3rem;
+}

@@ -1,25 +1,29 @@
 <h1>Lesson 20</h1>
-<h2>Variables are awesome!</h2>
+<h2>Comparing variables</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    do a lot of comparison tests but we have only 
+    stored the comparison result in a variable.
+    We can do much cooler things. Check this out. 
+    Say we are coding a video game. We might give the 
+    player 3 lives before they have to restart a level.
+    We can set a variable to keep track of how many lives they have left.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        lives_left = 3<br>
+        print(lives_left)<br>
+        lives_left -= 1<br>
+        print(lives_left > 0)<br>
+        lives_left -= 1<br>
+        print(lives_left > 0)<br>
+        lives_left -= 1<br>
+        print(lives_left > 0)
+
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>You can see that every time we take away a life, we 
+    check to see if the player has enough lives left to continue playing. 
+    As long as <b>lives_left</b> is greater than 0, we let the player continue.</p>
 
 <input type="hidden" id="lesson_number" value="20">
