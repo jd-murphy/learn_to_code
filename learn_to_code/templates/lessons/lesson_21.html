@@ -1,25 +1,28 @@
 <h1>Lesson 21</h1>
-<h2>Variables are awesome!</h2>
+<h2>Double variable comparisons!</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    to check a variable against a number. Lets check a variable against a variable.
+    It's not complicated. With what we know, I think you'll get the hang of it really quick.
+    Set two variables. Compare them with the test you need. and Voila! You've got it down!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        speed_limit = 55<br>
+        current_speed = 54<br>
+        print(current_speed <= speed_limit)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+<p>We can easily get python to check our input and see if the car is speeding!
+    Another scneario might be checking your bank account balance before you 
+    purchase something with your debit card. Banks do this everytime you use a card.
+</p> 
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        account_balance = 368.52<br>
+        purchase_total = 54.00<br>
+        print(account_balance > purchase_total)
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
 
 <input type="hidden" id="lesson_number" value="21">

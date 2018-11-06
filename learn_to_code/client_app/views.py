@@ -69,7 +69,7 @@ def code(request, lesson_number=1):
         lesson_info = Lesson.objects.get(pk=lesson_number)
     except LessonDoesNotExist:
         raise Http404("That lesson does not exist.")
-    last_lesson = Lesson.objects.last()
+    last_lesson = Lesson.objects.all().exclude(name="Not set").last()
     context = {'lesson': f"lessons/lesson_{lesson_number}.html", 'lesson_number': lesson_number, 'last_lesson': last_lesson.number }
     return render(request, 'client_app/code.html',  context=context)
 
@@ -77,7 +77,7 @@ def code(request, lesson_number=1):
 @login_required
 def lessons(request):
     completed_lessons = request.user.clientprofileinfo.completed_lessons
-    lessons = Lesson.objects.all()
+    lessons = Lesson.objects.all().exclude(name="Not set")
     if completed_lessons:
         completed_lessons = [int(i) for i in completed_lessons.split(',') if i]
     context = { 'lessons': lessons, 'completed_lessons': completed_lessons }
@@ -89,7 +89,7 @@ def reset(request):
     client_info = ClientProfileInfo.objects.get(user=request.user)
     client_info.completed_lessons = ""
     client_info.save()
-    lessons = Lesson.objects.all()
+    lessons = Lesson.objects.all().exclude(name="Not set")
     context = { 'lessons': lessons, 'completed_lessons': '' }
     return render(request, 'client_app/lessons.html', context=context)
 

@@ -1,25 +1,27 @@
 <h1>Lesson 24</h1>
-<h2>Variables are awesome!</h2>
+<h2>Let's see... What else?</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    to use an <b>if</b>... but what if that's not enough? What if we need 
+    some code to run if the <b>if</b> statement evaluates to <b>True</b> and some different code to run 
+    if the <b>if</b> statement is <b>False</b>?
+    Well it might surprise you how simple it is.
+    <b>if</b> matches up with <b>else</b> to make that happen!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        account_balance = 1475.96<br>
+        purchase_total = 299.00<br>
+
+        if account_balance > purchase_total:<br>
+        <span class="pl-4">print("You have enough money. Purchase successful.")</span><br>
+        else:<br>
+        <span class="pl-4">print("You don't have enough money. Purchase cancelled.")</span><br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>Don't forget to press <b>tab</b> after the <b>if</b> line and the <b>else</b> line. Also 
+    pay attention to your colons <b>:</b> at the end of those two lines! Try runnning it with 
+    different ammounts in the account balance and different purchase prices to really understand how the logic works.
+    You can make some really complex decisons now that you have <b>if</b> and <b>else</b>.</p>
 
 <input type="hidden" id="lesson_number" value="24">
