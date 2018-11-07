@@ -1,25 +1,25 @@
 <h1>Lesson 29</h1>
-<h2>Variables are awesome!</h2>
+<h2>print() it again!</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    <b>print()</b> by separating <b>arguments</b> with a comma, 
+    but there are more ways to <b>print()</b> out our information.
+    Another option is using <b>.format()</b>
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
         result = 5 * 16<br>
-        print(result)
+        print("The answer is {}".format(result))<br>
+        <br>
+        name = "Sarah"<br>
+        age = 23<br>
+        print("{name} is {age} years old".format(name=name, age=age))<br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>You can pass a single <b>argument</b> to <b>.format()</b> or you can pass more than one! 
+    You can see from the example above that if we only use one argument we use empty 
+    curly braces <b>{}</b> in our string. If you want to pass more than one <b>arguments</b> 
+    you can pass them as <b>keywords arguments</b>as in the second example. 
+    Make sure to name the arguments in the curly braces in your string! Look carefully at the examples to see the difference.</p>
 
 <input type="hidden" id="lesson_number" value="29">
