@@ -1,25 +1,27 @@
 <h1>Lesson 35</h1>
-<h2>Variables are awesome!</h2>
+<h2>Numbers are not strings!</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+    to take in input and work with some text input. But say we want to take in some numbers,
+     like maybe a cash register's software would, or on online banking application. We have to be aware that 
+     different kinds of data are different things to python. For example, you can type in numbers and strings. 
+     Python will read them both in as input. No problem. But when they are read in through the <b>input()</b> 
+     function, python converts everything automatically to a string. This is our first encounter with <b>data types</b>. 
+     In python, strings have a built in <b>data type</b> of <b>str</b>. That means that to python, 
+     everything in <b>"double quotes"</b> or <b>'single quotes'</b> will be considered a string of 
+     type <b>str</b>. And, for example, you can't do math with strings. So if you give python a 
+     number in the <b>input()</b> function, be aware that even though you typed a number, to python, it is now a string.
+     To do math with our number it must be converted from a string to a number <b>data type</b>, either <b>int</b> or <b>float</b>.
+     See the example to learn how to take <b>input</b> and turn a <b>str</b> into an <b>int</b>!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        num = input("Enter a number please: ")<br>
+        num = int(num)<br>
+        num += 1<br>
+        print(f"The next number is {num}")
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>Voila! We can work with data no matter what type it is!</p>
 
 <input type="hidden" id="lesson_number" value="35">

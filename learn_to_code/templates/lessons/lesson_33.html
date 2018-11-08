@@ -1,25 +1,27 @@
 <h1>Lesson 33</h1>
-<h2>Variables are awesome!</h2>
+<h2>So sensitive!</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+     to take input from our user and give it to python. The problem is, we were checking for the specific string <b>"programmer"</b> 
+     and if the user typed in <b>"Programmer"</b> or <b>"PROGRAMMER"</b> we wouldn't get the right result... Of course, python has 
+     a way to solve this problem! Python is <b>case sensitive</b>, that means that <b>"true"</b> is different than <b>"True"</b> is different than <b>"TRUE"</b>.
+     So we have to make sure python can handle any capitalization of a word and treat it as the same word. 
+     The trick is to use <b>.upper()</b> or <b>.lower()</b>! <b>.upper()</b> and <b>.lower()</b> are <b>methods</b> 
+     we can use to change <b>strings</b> in python. Check it out! Type in a word in all lowercase letters and run your code.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        data = input("What is the secret word? ")<br>
+        print(f"The secret is -> {data.upper()}")
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+<p><b>.lower()</b> works just the same. Try typing in your name in proper 
+    capitalization like this: <em>Firstname Lastname</em>. Run the code to see how python uses <b>.lower()</b>.</p> 
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        name = input("Enter your name: ")<br>
+        print(f"Transformed to lowercase -> {name.lower()}")
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
 
 <input type="hidden" id="lesson_number" value="33">
