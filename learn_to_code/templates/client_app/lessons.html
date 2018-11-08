@@ -12,7 +12,7 @@
                 <ul class="list-group mt-4">
                     {% for lesson in lessons %}
                         <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
-                            {% if lesson.number in completed_lessons %}
+                            {% if lesson in completed_lessons %}
                                 <img src="{% static 'images/completed.png' %}" alt="completed lesson" class="mr-3"><a href="{% url 'client_app:lesson_detail' lesson.number %}"><h5 class="pt-1">{{ lesson.number }}. {{ lesson.name }}</h5></a>
                             {% else %}
                                 <img src="{% static 'images/incomplete.png' %}" alt="lesson not yet completed" class="mr-3"><a href="{% url 'client_app:lesson_detail' lesson.number %}"><h5 class="pt-1">{{ lesson.number }}. {{ lesson.name }}</h5></a>

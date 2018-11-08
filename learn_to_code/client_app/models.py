@@ -19,7 +19,7 @@ class Badge(models.Model):
 class ClientProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     current_lesson = models.CharField(max_length=30, blank=True)
-    completed_lessons = models.TextField(blank=True)
+    completed_lessons = models.ManyToManyField(Lesson)
     badges_earned = models.TextField(blank=True)
 
     def __str__(self):

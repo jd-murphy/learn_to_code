@@ -24,7 +24,6 @@ def client_registration(request):
             user.save()
             profile.user = user
             profile.current_lesson = 1
-            profile.completed_lessons = ''
             profile.save()
             registered = True
         else:
@@ -76,18 +75,17 @@ def code(request, lesson_number=1):
 
 @login_required
 def lessons(request):
-    completed_lessons = request.user.clientprofileinfo.completed_lessons
+    completed_lessons = request.user.clientprofileinfo.completed_lessons.all()
     lessons = Lesson.objects.all().exclude(name="Not set")
-    if completed_lessons:
-        completed_lessons = [int(i) for i in completed_lessons.split(',') if i]
     context = { 'lessons': lessons, 'completed_lessons': completed_lessons }
+    print(f"User has completed these lessons: {completed_lessons}")
     return render(request, 'client_app/lessons.html', context=context)
 
 
 @login_required
 def reset(request):
     client_info = ClientProfileInfo.objects.get(user=request.user)
-    client_info.completed_lessons = ""
+    client_info.completed_lessons.clear()
     client_info.save()
     lessons = Lesson.objects.all().exclude(name="Not set")
     context = { 'lessons': lessons, 'completed_lessons': '' }
@@ -98,7 +96,8 @@ def reset(request):
 def complete_lesson(request):
     if request.method == "POST":
         lesson_number = request.POST.get('lesson_number')
-    client_info = ClientProfileInfo.objects.get(user=request.user)
-    client_info.completed_lessons += lesson_number + ","
-    client_info.save()
-    return HttpResponse(json.dumps({'success': 'Lesson marked as complete.'}), content_type="application/json")
+        client_info = ClientProfileInfo.objects.get(user=request.user)
+        client_info.completed_lessons.add(Lesson.objects.get(number=lesson_number))
+        client_info.save()
+        print(f"Lesson {lesson_number} marked as complete.")
+        return HttpResponse(json.dumps({'success': 'Lesson marked as complete.'}), content_type="application/json")
