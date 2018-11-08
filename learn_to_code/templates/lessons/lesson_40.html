@@ -1,25 +1,33 @@
 <h1>Lesson 40</h1>
-<h2>Variables are awesome!</h2>
+<h2>While True</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, WOW, those last two lessons were quite a bit of information. We are learning so much!
+    <b>Loops</b> are so powerful, and we will learn more about them in the next few lessons. But we need to 
+    learn about a potential problem we might run into with some <b>loops</b>.
+    The problem is an <b>infinite loop</b>, a <b>loop</b> that never stops. This can be troublesome 
+    because it can crash your program and cause problems for your user. We try to avoid <b>infinite loops</b>. 
+    But what fun would it be if we said <em>not</em> to do something, <em>and didn't do it!</em> 😝 
+    Let's make an <b>infinite loop</b> and see why it's a problem!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        while True:<br>
+            <span class="pl-4"> print('Ooops!')</span>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>This will probably cause your terminal or browser to crash. 
+    Basically your program (and this whole website!) might stop working. 
+    You can try going to another page on this site and then coming back 
+    to this lesson, but if that doesn't work you might have to close and restart your browser.
+</p>
+
+    
+    <div class="alert alert-danger">
+        <b>You may need to close and restart your broswer after running this code!</b>
+    </div>
+
+<p>
+    This is why we avoid <b>infinite loops</b> in our code. We always need a way out of our <b>loops</b>!
+</p>
 
 <input type="hidden" id="lesson_number" value="40">

@@ -1,25 +1,32 @@
 <h1>Lesson 39</h1>
-<h2>Variables are awesome!</h2>
+<h2>A second look</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's look at the code from the last lesson. That was a lot of new stuff.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        total = 0.0<br>
+        price = input("Enter the price of the item: ")<br>
+        while price:<br>
+            <span class="pl-4">total += float(price)</span><br>
+            <span class="pl-4">price = input("Enter the price of the next item: ")</span><br>
+        print(f"Your total is ${total}")
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>The first line <b>declares</b> and <b>initializes</b> a variable called <b>total</b> to keep track of the total price. 
+    The next line starts getting user <b>input</b>, which we're familiar with. We store the <b>input</b> into the variable <b>price</b>.
+    On the next line we start our <b>while loop</b>. <b>Loops</b> repeat code. 
+    The <b>while loop</b> runs the code inside, <em><b>while</b></em> the <b>condition</b> is <b>True</b>. 
+    In this example the <b>condition</b> is the variable <b>price</b>. That means as long as 
+    <b>price</b> contains any information at all, it will be considered <b>True</b>, and the <b>loop</b> will run again. 
+    Inside our <b>loop</b> we have two lines of code. The first line converts the <b>input</b> from a <b>str</b> to a <b>float</b>, 
+     and adds it to the variable <b>total</b>. This means the value of <b>total</b> is increased by the amount of <b>price</b>. We use <b>float()</b> 
+     to convert the input to a <b>float</b>, which is a number <b>data type</b> for working with decimals. 
+     Then we ask the user for the next price.
+    Everytime through the <b>loop</b>, the variable <b>price</b> is checked. If it contains something, 
+    it runs the <b>loop</b> again. When the user stops entering prices and just presses enter, the 
+    variable <b>price</b> won't have anything in it, it is empty. Python treats an empty variable 
+    as <b>False</b> so the <b>loop</b> stops immediately. Then the code <em>after</em> the <b>loop</b> runs. 
+</p>
 
 <input type="hidden" id="lesson_number" value="39">

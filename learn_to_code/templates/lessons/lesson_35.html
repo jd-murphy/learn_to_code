@@ -3,23 +3,24 @@
 
 <p>Okay coder, we've seen how
     to take in input and work with text. But say we want to take in some numbers,
-     like maybe a cash register's software would, or on online banking application. We have to be aware that 
+     like a cash register's software would, or on online banking application. We have to be aware that 
      different kinds of data mean different things to python. For example, you can type in numbers and strings. 
-     Python will read them both in as input. No problem. But when they are read in through the <b>input()</b> 
-     function, python converts everything automatically to a string. This is our first encounter with <b>data types</b>. 
-     In python, strings have a <b>data type</b> of <b>str</b>. That means that to python, 
-     everything in <b>"double quotes"</b> or <b>'single quotes'</b> will be considered a string of 
-     type <b>str</b>. And, for example, you can't do math with strings. So if you give python a 
-     number in the <b>input()</b> function, be aware that even though you typed a number, to python, it is now a string.
-     To do math with our number it must be converted from a string to a number <b>data type</b>, either <b>int</b> or <b>float</b>.
-     See the example to learn how to take <b>input</b> and turn a <b>str</b> into an <b>int</b>!
+     When python reads them in through the <b>input()</b> 
+     function, python converts everything to a string. This is our first encounter with <b>data types</b>. 
+     In python, strings have a <b>data type</b> of <b>str</b>. To python, 
+     everything in <b>"double quotes"</b> or <b>'single quotes'</b> is considered a string of 
+     type <b>str</b>. And, for example, you can't do math with strings. If you give python a 
+     number in the <b>input()</b> function, even though you typed a number, to python, it is now a string.
+     To do math with our number it must first be converted from a string back to a number 
+     <b>data type</b>: either <b>int</b> or <b>float</b>.
+     Let's learn how to take <b>input</b> and turn a <b>str</b> into an <b>int</b>!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        num = input("Enter a number please: ")<br>
-        num = int(num)<br>
-        num += 1<br>
-        print(f"The next number is {num}")
+        input_num = input("Enter a number please: ")<br>
+        input_num = int(input_num)<br>
+        plus_five = input_num + 5<br>
+        print(f"{input_num} plus five is {plus_five}")
     </code>
 </div>
 <p>Voila! We can work with data no matter what type it is!</p>
