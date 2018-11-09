@@ -1,25 +1,48 @@
 <h1>Lesson 61</h1>
-<h2>Variables are awesome!</h2>
+<h2>Santa's list code review</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, That was a lot, let's review the code for Santa's list from the last lesson! 
+    First, we <b>declare</b> and <b>initialize</b> two empty <b>lists</b>. One for nice children, and one for naughty children.
+    Then we start getting <b>input()</b> from the user. We ask for a child's name and which list they should go on. 
+    We start a <b>while loop</b> to continue asking for names until the user is finished. The condition controlling the <b>loop</b> 
+    is that the user must enter some value for the child's name and the destination <b>list</b>. 
+    If the variables are empty, the <b>loop</b> will exit.
+    We convert the string in the variable <b>destination</b> to lowercase 
+    and compare it to the string <b>'nice'</b>. If the comparison is <b>True</b>, we will <b>.append()</b> the 
+    child to the <b>nice_list</b>. If the child is not destined for <b>nice_list</b>, 
+    we check if they are headed to the <b>naughty_list</b> in the <b>elif</b> clause. We convert the string in the variable <b>destination</b> to lowercase 
+    and compare it to the string <b>'naughty'</b>. If the comparison is <b>True</b>, we will <b>.append()</b> the 
+    child to the <b>naughty_list</b>. If the user typed a string that doesn't match <b>'naughty'</b> or <b>'nice'</b>, 
+    we ask them to enter the child's information again. We repeat the process until the user is finished entering names.
+    When the user is done they can press <b>enter</b> twice without entering a child's info, and the program will exit the <b>loop</b>
+     and print out the resulting <b>lists</b>.
+
 </p>
-<div class="mt-3 mb-3 ml-5">
-    <code>
-        result = 5 * 16<br>
-        print(result)
-    </code>
+<button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#code-toggle">
+    Show / Hide code
+</button>
+<div class="mt-3 mb-3 ml-5 collapse" id="code-toggle">
+    <div class="card card-body">
+        <code>
+            nice_list = []<br>
+            naughty_list = []<br>
+            child = input("Add a child: (press enter twice to quit) ")<br>
+            destination = input("Which list? ")<br>
+            while child and destination:<br>
+                &nbsp;&nbsp;if destination.lower() == 'nice': <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;nice_list.append(child) <br>
+                &nbsp;&nbsp;elif destination.lower() == 'naughty': <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;naughty_list.append(child) <br>
+                &nbsp;&nbsp;else: <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Try adding the child again.") <br>
+                &nbsp;&nbsp;child = input("Add a child: (press enter twice to quit) ") <br>
+                &nbsp;&nbsp;destination = input("Which list? ") <br>
+            print("nice_list")<br>
+            print(nice_list)<br>
+            print("naughty_list")<br>
+            print(naughty_list)
+        </code>
+    </div>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
 
 <input type="hidden" id="lesson_number" value="61">
