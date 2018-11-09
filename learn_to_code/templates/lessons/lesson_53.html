@@ -1,25 +1,27 @@
 <h1>Lesson 53</h1>
-<h2>Variables are awesome!</h2>
+<h2>Out of range!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we know how to find out how long a <b>list</b> is.
+    The last lesson said we should use <b>len()</b> to find out how long our <b>lists</b> are... But let's SEE why we need to know!
+     <b>Errors</b> are really helpful to us programmers.
+    We aren't afraid of them. We need to get familiar with them so we can fix them when something is wrong with our code.
+    Let's try to access an <b>element</b> that is isn't in our <b>list</b>!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nums = [4, 0, 2, 17, 8]<br>
+        print(len(nums))<br>
+        print(nums[5])
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+<p>Our <b>list</b> is 5 <b>elements</b> long. That means the highest <b>index</b> is 4. An <b>index</b> of 5 is <b>out of range</b>.</p> 
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        Traceback (most recent call last):<br>
+        File "python", line 2, in &#60;module&#62;<br>
+        IndexError: list index out of range<br>       
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>By reading our <b>error</b> we know exactly what's wrong!</p>
 
 <input type="hidden" id="lesson_number" value="53">

@@ -1,25 +1,30 @@
 <h1>Lesson 60</h1>
-<h2>Variables are awesome!</h2>
+<h2>Make a list and check it twice</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we know Santa makes lists every year.
+    Nice children go on The Nice List and naughty children go on The Naughty List. 
+    Let's help Santa make his <b>lists</b>! 🎅🏼 🎁 🎄 ❄️ 
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nice_list = []<br>
+        naughty_list = []<br>
+        child = input("Add a child: (or press enter to quit) ")<br>
+        destination = input("Which list? (or press enter to quit) ")<br>
+        while child and destination:<br>
+            &nbsp;&nbsp;if destination.lower() == 'nice': <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nice_list.append(child) <br>
+            &nbsp;&nbsp;elif destination.lower() == 'naughty': <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;naughty_list.append(child) <br>
+            &nbsp;&nbsp;else: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Try adding the child again.") <br>
+            &nbsp;&nbsp;child = input("Add a child: (or press enter to quit) ") <br>
+            &nbsp;&nbsp;destination = input("Which list? (or press enter to quit) ") <br>
+        print("nice_list")<br>
+        print(nice_list)<br>
+        print("naughty_list")<br>
+        print(naughty_list)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
 
 <input type="hidden" id="lesson_number" value="60">

@@ -1,25 +1,29 @@
 <h1>Lesson 54</h1>
-<h2>Variables are awesome!</h2>
+<h2>Let's change that list!</h2>
 
 <p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+     to access the <b>elements</b> in a <b>list</b>, and check how long 
+     a <b>list</b> is with <b>len()</b> to avoid <b>errors</b>. Now we know enough to 
+     start changing our <b>list</b> and the <b>elements</b> in it!
+    Let's <b>loop</b> through a <b>list</b> and change each <b>element</b>!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nums = [1, 4, 3, 6, 7, 2]<br>
+        for n in range(len(nums)):<br>
+            &nbsp;&nbsp;nums[n] = 5 <br>
+        print(nums)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>That might be a lot to take in, so let's talk through each step. 
+    We start with a <b>list</b>. We find the length of the <b>list</b> with <b>len()</b>. 
+    The length is 6 so we use 6 to create a <b>range()</b> from 0 to 5.
+    Then we <b>loop</b> through the sequence of numbers that <b>range()</b> gives us: 0, 1, 2, 3, 4, 5.
+    Each <b>iteration</b> through the <b>loop</b>, <b>n</b> is going to be the next number from the <b>range()</b>.
+    We use <b>n</b> as the <b>index</b> to access each <b>element</b> in the <b>list nums</b>. 
+    Because we used the length of <b>nums</b> and <b>range()</b> to control our <b>loop</b>, 
+    we don't need to worry about index errors. They both start at <b>index</b> 0. 
+    Each time through the <b>loop</b> we change the current <b>element</b> to 5. 
+</p>
 
 <input type="hidden" id="lesson_number" value="54">

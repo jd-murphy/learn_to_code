@@ -1,25 +1,27 @@
 <h1>Lesson 58</h1>
-<h2>Variables are awesome!</h2>
+<h2>Evens only, please!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's use what we learned to make sure only even numbers are in our list. 
+    If we find an odd number, let's add <b>1</b> to it and make it even! 
+    We'll use modulo <b>%</b> to check every number in our <b>list</b>.
+    We know that every even number divided by 2 is 0. We'll have python check <b>if</b> each number <b>% 2</b> is <em>not equal</em> to <b>0</b>. 
+    We use <b>!=</b> to check if something is not equal to something else.
+    If the answer is <b>True</b> we know the number is odd so we add one to it to make it even, 
+    if the answer is <b>False</b> the number must already be even. 
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nums = [3, 5, 2, 6, 9, 19, 34, 23, 6, 13, 930, 234, 123, 643, 5, 353, 7564, 99, 102]<br>
+        for i in range(len(nums)):<br>
+            &nbsp;&nbsp;if nums[i] % 2 != 0: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nums[i] += 1 <br>
+        print(nums)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>Take a look at the numbers in the list now. They are all even! 
+    This lesson makes a good example of how we need to think sometimes when we are coding. 
+    As programmers we need to challenge our ways of thinking and use logic to translate 
+    our ideas into code that python can understand.
+</p>
 
 <input type="hidden" id="lesson_number" value="58">

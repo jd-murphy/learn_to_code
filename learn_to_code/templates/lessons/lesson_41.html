@@ -1,25 +1,28 @@
 <h1>Lesson 41</h1>
-<h2>Variables are awesome!</h2>
+<h2>Break out!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we've seen why we avoid <b>infinite loops</b>, but that doesn't mean we can't use <b>while True</b>. 
+    We need to have a way to end our <b>loops</b> at some point. Let's use a video game example to see how we could use <b>while True</b> 
+    and <b>break</b> out of the <b>loop</b>. When you code a video game, you want the game to run until the user is done playing. 
+    We don't know when that will be, so we'll use a <b>while loop</b> and have the <b>condition</b> set to <b>while True</b>. 
+    When the user is done, we'll use a python <b>keyword</b>
+     called <b>break</b>. This ends the <b>loop</b>. Notice the <b>"\n"</b> in our string. This tells python to start a new line.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        while True:<br>
+            &nbsp;&nbsp;# this is a comment <br>
+            &nbsp;&nbsp;# let's pretend this is our game code  <br>
+            &nbsp;&nbsp;print("Starting level...\nPlaying level...\nFinished.")  <br>
+            &nbsp;&nbsp;# at the end of each level ask user <br>
+            &nbsp;&nbsp;</span>play_again = input("Do you want to keep playing? (y/n) ") <br>
+            &nbsp;&nbsp;</span>if play_again.lower() == 'n': <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;break <br>
+        print("Your progress was saved. Thanks for playing!")
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>As you can see, it might be good to set a <b>loop</b> that has no specified end, and let our user choose when to end the program. 
+    This isn't an <b>infinite loop</b> because we allow the user to <b>break</b> out of the <b>loop</b> when they're done playing.
+</p>
 
 <input type="hidden" id="lesson_number" value="41">

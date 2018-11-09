@@ -1,25 +1,25 @@
 <h1>Lesson 56</h1>
-<h2>Variables are awesome!</h2>
+<h2>Double those elements!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's use what we learned to double each <b>element</b> in a <b>list</b>.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nums = [200, 100, 600, 900, 500]<br>
+        for i in range(len(nums)):<br>
+            &nbsp;&nbsp;nums[i] *= 2 <br>
+        print(nums)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>We are using the same process as in the last few lessons. 
+    We find the length of the <b>list</b> with <b>len()</b>. 
+    The length is 5 so we use 5 to create a <b>range()</b> from 0 to 4.
+    Then we <b>loop</b> through the sequence of numbers that <b>range()</b> gives us: 0, 1, 2, 3, 4.
+    Each <b>iteration</b> through the <b>loop</b>, <b>i</b> is going to be the next number from the <b>range()</b>.
+    We use <b>i</b> as the <b>index</b> to access each <b>element</b> in the <b>list nums</b>. 
+    Because we used the length of <b>nums</b> and <b>range()</b> to control our <b>loop</b>, 
+    we don't need to worry about index errors. They both start at <b>index</b> 0. 
+    For each item in the <b>list</b> we double it!
+</p>
 
 <input type="hidden" id="lesson_number" value="56">

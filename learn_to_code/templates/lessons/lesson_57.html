@@ -1,25 +1,29 @@
 <h1>Lesson 57</h1>
-<h2>Variables are awesome!</h2>
+<h2>Even or odd?</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's use what we learned to check if each <b>element</b> in a <b>list</b> is even or odd. 
+    We need one more tool to do this. Let's learn about the <b>operator</b> modulo <b>%</b>. 
+    It's a math operator just like <b>+, -, *,</b> or <b>/</b>. The modulo operator <b>%</b> uses division <b>/</b> to find the 
+    remainder of division between two numbers. If we divide 10 by 2 the answer is 5, 
+    and there is nothing left over. The remainder is 0. If we divide 10 by 3 the answer is 3 with a remainder of 1.
+    We use modulo <b>%</b> to find remainders. This works nicely for checking if a number is even or odd. 
+    Any even number divided by 2 is 0. We ask python <b>if</b> some number <b>% 2</b> equals <b>0</b>. 
+    The answer is <b>True</b> if the number is even, and <b>False</b> if the number is odd.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        nums = [3, 5, 2, 6, 9, 19, 34, 23, 6, 13, 930, 234, 123, 643, 5, 353, 7564, 99, 102]<br>
+        for i in range(len(nums)):<br>
+            &nbsp;&nbsp;if nums[i] % 2 == 0: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nums[i] = 'Even' <br>
+            &nbsp;&nbsp;else: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;nums[i] = 'Odd' <br>
+        print(nums)
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>We are using modulo <b>%</b> to check if each number is divisible by 2. 
+    If so, that means the number is even. We replace every even number with the string 'Even'. 
+    Everything else is not even, and therefore odd. We replace every number that is not even with 'Odd'. 
+</p>
 
 <input type="hidden" id="lesson_number" value="57">

@@ -1,25 +1,24 @@
 <h1>Lesson 42</h1>
-<h2>Variables are awesome!</h2>
+<h2>While n is less than...</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we've seen lots of uses for a <b>while loop</b>, 
+    but there are many other ways to set the <b>condition</b>. 
+    Let's use an <b>int</b> variable to control <b>interations</b> through 
+    a <b>loop</b>. Each time through a <b>loop</b> is called an <b>iteration</b>.
+    Let's set a variable <b>n</b> and set the <b>condition</b> for our <b>loop</b> to be that <b>n is less than 10</b>.
+    On each <b>iteration</b> through the loop, let's <b>increment</b> <b>n</b> by one.
+    In python code that looks like this
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        n = 0<br>
+        while n < 10:<br>
+            &nbsp;&nbsp;print(f"n is {n}") <br>
+            &nbsp;&nbsp;n += 1 <br>
+        print(f"The loop is finished. n is {n}")<br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p> Notice that if we never <b>increment</b> <b>n</b> we would have an <b>infinite loop</b>! 
+</p>
 
 <input type="hidden" id="lesson_number" value="42">

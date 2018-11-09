@@ -1,25 +1,36 @@
 <h1>Lesson 45</h1>
-<h2>Variables are awesome!</h2>
+<h2>Fancy for loops</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's look at how <b>for loops</b> work with <b>range()</b>. A <b>for loop</b> 
+    completes one <b>iteration</b> of the <b>loop</b> <em>for each thing</em>. A <b>range()</b> gives us a sequence of numbers. 
+    When we use a <b>for loop</b> with a <b>range()</b> we get <em>one <b>iteration</b> for each number in the range</em>.
+    If we give <b>range()</b> one <b>argument</b>, it gives us a sequence from 0 up to (but not including) the number we give it. 
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        for i in range(10):<br>
+            &nbsp;&nbsp;print(f"Once for i when i is {i}")</span>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
+
+<p>
+    If we give <b>range()</b> two <b>arguments</b> it gives us a sequence from the first number up to (but not including) the second number. 
+</p>
 <div class="mt-3 mb-3 ml-5">
-    <code>80</code>
+    <code>
+        for i in range(10, 20):<br>
+            &nbsp;&nbsp;print(f"Once for i when i is {i}")</span>
+    </code>
 </div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+
+<p>
+    If we give <b>range()</b> three <b>arguments</b> it gives us a sequence from the first number up to (but not including) the second number <em>in steps the size of the third number!</em>
+</p> 
+<div class="mt-3 mb-3 ml-5">
+    <code>
+        for i in range(30, 70, 5):<br>
+            &nbsp;&nbsp;print(f"Once for i when i is {i}")</span>
+    </code>
+</div>
 
 <input type="hidden" id="lesson_number" value="45">
