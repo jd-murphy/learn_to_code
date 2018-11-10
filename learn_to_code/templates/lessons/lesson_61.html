@@ -2,47 +2,197 @@
 <h2>Santa's list code review</h2>
 
 <p>Okay coder, That was a lot, let's review the code for Santa's list from the last lesson! 
-    First, we <b>declare</b> and <b>initialize</b> two empty <b>lists</b>. One for nice children, and one for naughty children.
-    Then we start getting <b>input()</b> from the user. We ask for a child's name and which list they should go on. 
-    We start a <b>while loop</b> to continue asking for names until the user is finished. The condition controlling the <b>loop</b> 
-    is that the user must enter some value for the child's name and the destination <b>list</b>. 
-    If the variables are empty, the <b>loop</b> will exit.
-    We convert the string in the variable <b>destination</b> to lowercase 
-    and compare it to the string <b>'nice'</b>. If the comparison is <b>True</b>, we will <b>.append()</b> the 
-    child to the <b>nice_list</b>. If the child is not destined for the <b>nice_list</b>, 
-    we check if they are headed to the <b>naughty_list</b> in the <b>elif</b> clause. We convert the string in the variable <b>destination</b> to lowercase 
-    and compare it to the string <b>'naughty'</b>. If the comparison is <b>True</b>, we will <b>.append()</b> the 
-    child to the <b>naughty_list</b>. If the user typed a string that doesn't match <b>'naughty'</b> or <b>'nice'</b>, 
-    we ask them to enter the child's information again. We repeat the process until the user is finished entering names.
-    When the user is done they can press <b>enter</b> twice without entering a child's info, and the program will exit the <b>loop</b>
-     and print out the resulting <b>lists</b>.
-
 </p>
-<button class="btn btn-outline-info" type="button" data-toggle="collapse" data-target="#code-toggle">
-    Show / Hide code
-</button>
-<div class="mt-3 mb-3 ml-5 collapse" id="code-toggle">
-    <div class="card card-body">
-        <code>
-            nice_list = []<br>
-            naughty_list = []<br>
-            child = input("Add a child: (press enter twice to quit) ")<br>
-            destination = input("Which list? ")<br>
-            while child and destination:<br>
-                &nbsp;&nbsp;if destination.lower() == 'nice': <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;nice_list.append(child) <br>
-                &nbsp;&nbsp;elif destination.lower() == 'naughty': <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;naughty_list.append(child) <br>
-                &nbsp;&nbsp;else: <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;print("Try adding the child again.") <br>
-                &nbsp;&nbsp;child = input("Add a child: (press enter twice to quit) ") <br>
-                &nbsp;&nbsp;destination = input("Which list? ") <br>
-            print("nice_list")<br>
-            print(nice_list)<br>
-            print("naughty_list")<br>
-            print(naughty_list)
-        </code>
-    </div>
+
+<div class="mt-3 mb-3 ml-5">
+    <code>
+        <span class="card-1 highlight-code">nice_list = []<br></span>
+        <span class="card-1 highlight-code">naughty_list = []<br></span>
+        <span class="card-2">child = input("Add a child: (press enter twice to quit) ")<br></span>
+        <span class="card-2">destination = input("Which list? ")<br></span>
+        <span class="card-3">while child and destination:<br></span>
+        <span class="card-4">&nbsp;&nbsp;if destination.lower() == 'nice': <br></span>
+        <span class="card-5">&nbsp;&nbsp;&nbsp;&nbsp;nice_list.append(child) <br></span>
+        <span class="card-6">&nbsp;&nbsp;elif destination.lower() == 'naughty': <br></span>
+        <span class="card-7">&nbsp;&nbsp;&nbsp;&nbsp;naughty_list.append(child) <br></span>
+        <span class="card-8">&nbsp;&nbsp;else: <br></span>
+        <span class="card-8">&nbsp;&nbsp;&nbsp;&nbsp;print("Try adding the child again.") <br></span>
+        <span class="card-9">&nbsp;&nbsp;child = input("Add a child: (press enter twice to quit) ") <br></span>
+        <span class="card-9">&nbsp;&nbsp;destination = input("Which list? ") <br></span>
+        <span class="card-10">print("nice_list")<br></span>
+        <span class="card-10">print(nice_list)<br></span>
+        <span class="card-10">print("naughty_list")<br></span>
+        <span class="card-10">print(naughty_list)</span>
+    </code>
 </div>
+
+
+
+
+<div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active card bg-info highlight-code" id="card-1">
+            <!-- first slide -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">1 / 10</h5>
+                        <p class="card-text">
+                            First, we <b>declare</b> and <b>initialize</b> two empty <b>lists</b>. One for nice children, and one for naughty children.
+                        </p>
+                    </div>
+                </div>
+            
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-2">
+            <!-- second slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">2 / 10</h5>
+                        <p class="card-text">
+                            Then we start getting <b>input()</b> from the user. We ask for a child's name and which list they should go on. 
+                        </p>
+                    </div>
+                </div>
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-3">
+            <!-- third slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">3 / 10</h5>
+                        <p class="card-text">                            
+                            We start a <b>while loop</b> to continue asking for names until the user is finished. The condition controlling the <b>loop</b> 
+                            is that the user must enter some value for the child's name and the destination <b>list</b>. 
+                            If the variables are empty, the <b>loop</b> will exit.
+                        </p>
+                    </div>
+                </div>
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-4">
+            <!-- fourth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">4 / 10</h5>
+                        <p class="card-text">
+                            We convert the string in the variable <b>destination</b> to lowercase 
+                            and compare it to the string <b>'nice'</b>.                                 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-5">
+            <!-- fifth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">5 / 10</h5>
+                        <p class="card-text">                        
+                            If the comparison is <b>True</b>, we will <b>.append()</b> the 
+                            child to the <b>nice_list</b>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-6">
+            <!-- sixth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">6 / 10</h5>
+                        <p class="card-text">
+                            If the child is not destined for the <b>nice_list</b>, 
+                            we check if they are headed to the <b>naughty_list</b> in the <b>elif</b> clause. We convert the string in the variable <b>destination</b> to lowercase 
+                            and compare it to the string <b>'naughty'</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-7">
+            <!-- seventh slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">7 / 10</h5>
+                        <p class="card-text">
+                            If the comparison is <b>True</b>, we will <b>.append()</b> the 
+                            child to the <b>naughty_list</b>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-8">
+            <!-- eighth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">8 / 10</h5>
+                        <p class="card-text">                            
+                            If the user typed a string that doesn't match <b>'naughty'</b> or <b>'nice'</b>, 
+                            we ask them to enter the child's information again. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-9">
+                <!-- ninth slide -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">9 / 10</h5>
+                        <p class="card-text">
+                            We repeat the process until the user is finished entering names.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-10">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">10 / 10</h5>
+                            <p class="card-text">
+                                When the user is done they can press <b>enter</b> twice without entering a child's info, and the program will exit the <b>loop</b>
+                                and print out the resulting <b>lists</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon">Prev</span>
+        </a>
+            
+        <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon">Next</span>
+        </a>
+    </div>
+
+<!-- 
+
+
+First, we <b>declare</b> and <b>initialize</b> two empty <b>lists</b>. One for nice children, and one for naughty children.
+
+Then we start getting <b>input()</b> from the user. We ask for a child's name and which list they should go on. 
+
+We start a <b>while loop</b> to continue asking for names until the user is finished. The condition controlling the <b>loop</b> 
+is that the user must enter some value for the child's name and the destination <b>list</b>. 
+If the variables are empty, the <b>loop</b> will exit.
+
+We convert the string in the variable <b>destination</b> to lowercase 
+and compare it to the string <b>'nice'</b>. 
+
+If the comparison is <b>True</b>, we will <b>.append()</b> the 
+child to the <b>nice_list</b>. 
+
+If the child is not destined for the <b>nice_list</b>, 
+we check if they are headed to the <b>naughty_list</b> in the <b>elif</b> clause. We convert the string in the variable <b>destination</b> to lowercase 
+and compare it to the string <b>'naughty'</b>.
+
+If the comparison is <b>True</b>, we will <b>.append()</b> the 
+child to the <b>naughty_list</b>. 
+
+If the user typed a string that doesn't match <b>'naughty'</b> or <b>'nice'</b>, 
+we ask them to enter the child's information again. 
+
+We repeat the process until the user is finished entering names.
+
+
+When the user is done they can press <b>enter</b> twice without entering a child's info, and the program will exit the <b>loop</b>
+ and print out the resulting <b>lists</b>.
+ -->
 
 <input type="hidden" id="lesson_number" value="61">

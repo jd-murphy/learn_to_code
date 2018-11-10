@@ -43,9 +43,12 @@ $(document).ready(function(){
     var clipboard = new ClipboardJS('.copy-to-clip');
 
     $('.carousel').on('slide.bs.carousel',function(e){
-        var i = $(".active", e.target)[0];
-        var m = $('.' + i.id)[0];
-        $(m).removeClass("highlight-code");
+        // var i = $(".active", e.target)[0];
+        // var m = $('.' + i.id)[0];
+        // $(m).removeClass("highlight-code");
+        $(".highlight-code").each(function() {
+            $(this).removeClass("highlight-code")
+        })
         $('.' + e.relatedTarget.id).addClass("highlight-code")
       });
       
