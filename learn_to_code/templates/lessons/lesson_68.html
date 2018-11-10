@@ -1,25 +1,59 @@
 <h1>Lesson 68</h1>
-<h2>Variables are awesome!</h2>
+<h2>Dummy functions</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's use some fake <b>functions</b> to demonstrate a concept. 
+    Our <b>functions</b> in this lesson won't do much besides <b>print()</b> out a message or return a fake value. 
+    But this will help us understand how complex applications can use many different <b>functions</b> to get work done. 
+    Try to read through the code and see the how the functions are interacting with each other. Although there is no logic in these <b>functions</b>, 
+    they demonstrate how functions pass data around.
 </p>
-<div class="mt-3 mb-3 ml-5">
-    <code>
-        result = 5 * 16<br>
-        print(result)
-    </code>
-</div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+
+<button class="mt-3 mb-3 btn btn-outline-info" type="button" data-toggle="collapse" data-target="#code-toggle">
+        Show / Hide Code
+    </button>
+
+    <div class="mt-3 mb-3 ml-5 collapse" id="code-toggle">
+        <div class="card card-body">
+            <code id="copy-code">
+                def login(user, password):<br>
+                &nbsp;&nbsp;print(f"Welcome, {user}. You are logged in.")<br>
+                &nbsp;&nbsp;return user<br>
+                <br>
+                def search_flight(city, date):<br>
+                &nbsp;&nbsp;print(f"searching flights to {city}...")<br>
+                <br>
+                def display_flights(flights):<br>
+                &nbsp;&nbsp;print("Here are the flights we found: ...")<br>
+                <br>
+                def select_tickets(flight):<br>
+                &nbsp;&nbsp;print("Here are your selected tickets.")<br>
+                &nbsp;&nbsp;return ['t_id:553412']<br>
+                <br>
+                def calculate_fees(ticket_id):<br>
+                &nbsp;&nbsp;print("Preparing your total...")<br>
+                &nbsp;&nbsp;return '129.87'<br>
+                <br>
+                def purchase_tickets(total, auth_token):<br>
+                &nbsp;&nbsp;print("Purchasing your tickets...")<br>
+                &nbsp;&nbsp;return ['t_id:553412']<br>
+                <br>
+                def confirmation(tickets, auth_token):<br>
+                &nbsp;&nbsp;print("Your purchase is complete. Sending comfirmation email!")<br>
+                <br>
+                auth_token = login("Mr. Phil Dunphy", "password123")<br>
+                flights = search_flight("Los Angeles", "12/17/2018")<br>
+                flight = display_flights(flights)<br>
+                ticket_id = select_tickets(flight)<br>
+                tickets = purchase_tickets(calculate_fees(ticket_id), auth_token)<br>
+                confirmation(tickets, auth_token)            
+            </code>
+        </div>
+        <button class="copy-to-clip btn btn-link" data-clipboard-target="#copy-code">
+            Copy Code
+        </button>
+    </div>
+
+<p>This is a silly and simple example to demonstrate how complex an application 
+    can be and how functions can work together. Soon we'll be writing our own complex applications.</p>
 
 <input type="hidden" id="lesson_number" value="68">

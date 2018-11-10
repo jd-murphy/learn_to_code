@@ -1,25 +1,30 @@
 <h1>Lesson 70</h1>
-<h2>Variables are awesome!</h2>
+<h2>Prime time!</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, you might have noticed in the last lesson that 127 only has two factors: 1 and 127.
+    Numbers like this are called <b>prime</b> numbers in math. Let's write a <b>function</b> to 
+    check if a <b>list</b> has any prime numbers in it! It should stop at the first prime number it finds.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+            def contains_prime(num_list):<br>
+            &nbsp;&nbsp;for num in num_list:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for i in range(2,num):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num % i == 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num != 1:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return f"Contains at least one prime! ({num})"<br>
+            &nbsp;&nbsp;return f"No primes found in list."<br>
+            <br>
+            print(contains_prime([127])) # 127<br>
+            print(contains_prime([6,8,25,99])) # none<br>
+            print(contains_prime([1,2,3,4,5,6,7,8,9,10])) # 2,3,5,7<br>
+            print(contains_prime([20,30,40,50])) # none
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>
+
+</p>
 
 <input type="hidden" id="lesson_number" value="70">

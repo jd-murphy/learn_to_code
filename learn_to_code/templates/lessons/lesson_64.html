@@ -1,25 +1,31 @@
 <h1>Lesson 64</h1>
-<h2>Variables are awesome!</h2>
+<h2>Parameters and Arguments</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we've written a simple <b>function</b>, 
+    but to be useful we need to make our <b>functions</b> dynamic. 
+    We've used python's built in <b>print()</b> function.
+    You've noticed that every time we use <b>print()</b>, we pass in the 
+    string we want it to display in the terminal. That string is called an <b>argument</b> and shows
+     how dynamic <b>functions</b> can be.
+    <b>print()</b> does <em>the same thing no matter what string we give it</em>: It displays the <b>argument</b> in the terminal.
+    We can set up our own <b>functions</b> to accept <b>arguments</b>. In a <b>function's definition</b>, 
+    we <b>define</b> <b>parameters</b> to hold the <b>arguments</b> we need the <b>function</b> to accept.
+     When we <b>call the function</b> we pass in an <b>argument</b> for each <b>parameter</b>.
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        def do_math(a, b):<br>
+        &nbsp;&nbsp;print(f"{a} plus {b} is {a+b}")<br>
+        &nbsp;&nbsp;print(f"{a} minus {b} is {a-b}")<br>
+        &nbsp;&nbsp;print(f"{a} multiplied by {b} is {a*b}")<br>
+        &nbsp;&nbsp;if b != 0:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(f"{a} divided by {b} is {a/b}")<br>
+        <br>
+        do_math(14, 6)<br>
+        do_math(3, 9)<br>
+        do_math(17, 8)<br>
+        do_math(62, 0)<br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
 
 <input type="hidden" id="lesson_number" value="64">

@@ -1,25 +1,25 @@
 <h1>Lesson 67</h1>
-<h2>Variables are awesome!</h2>
+<h2>A second look at add_tax</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's take a close look at our <b>function add_tax()</b> from the previous lesson.
+
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        def add_tax(total):<br>
+        &nbsp;&nbsp;tax_rate = 8.25 / 100<br>
+        &nbsp;&nbsp;tax = total * tax_rate<br>
+        &nbsp;&nbsp;return (total + tax)<br>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>We <b>define</b> the <b>function</b> using the <b>def keyword</b> and tell python the name of this <b>function</b>
+ will be <b>add_tax</b>. Inside the required parentheses, we code a <b>parameter</b> named <b>total</b> to hold an <b>argument</b> when we call the function.
+  We set a variable called <b>tax_rate</b> to be a <b>float</b> representing the percentage of tax for the transaction (8.25%) which we divide by 100 to get a decimal value for the tax percentage.
+  Then we multiply the correct decimal tax rate by the parameter <b>total</b>, which will hold the value we pass in when we <b>call the function</b>.
+   After storing the calculated tax, we have to add it to the total and return the calculated total which now includes the tax. 
+   We group <b>total + tax</b> with parentheses to make it clearer what is happenening. 
+   In this particaluar case it does not change the outcome of the calculation.
+  
+</p>
 
 <input type="hidden" id="lesson_number" value="67">

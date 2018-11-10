@@ -1,25 +1,28 @@
 <h1>Lesson 66</h1>
-<h2>Variables are awesome!</h2>
+<h2>Ughh, taxes...</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, we've talked about writing code for an online shopping application and cash register software. 
+    Until now, we've avoided a harsh reality... Most transactions are taxed by the government. 
+    Taxes are usually a percentage added on at the end of a transaction. Let's write a function to make our 
+    shopping application more realistic by calculating tax for the purchase. Remember we need to convert our <b>input</b> 
+    to a <b>float</b> when we work with numbers with decimals, like money!
 </p>
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        def add_tax(total):<br>
+        &nbsp;&nbsp;tax_rate = 8.25<br>
+        &nbsp;&nbsp;tax = total * (tax_rate/100)<br>
+        &nbsp;&nbsp;return total + tax<br>
+        <br>
+        purchase_total = float(input("Enter the merchandise total: "))<br>
+        final_total = add_tax(purchase_total)<br>
+        print(f"Your total including tax is ${final_total}")<br>
+
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+<p>
+    Awesome! 😎 Our application is becoming more realistic. <b>Functions</b> make our code much more powerful!
+    Let's walk through the <b>add_tax()</b> <b>function</b> in the next lesson.
+</p>
 
 <input type="hidden" id="lesson_number" value="66">
