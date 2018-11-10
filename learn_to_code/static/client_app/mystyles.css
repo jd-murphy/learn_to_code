@@ -49,3 +49,7 @@ img {
 .main-content {
     padding: 3rem;
 }
+
+.highlight-code {
+    background-color: rgba(0,0,0,.1);
+}

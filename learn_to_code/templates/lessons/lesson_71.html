@@ -1,25 +1,155 @@
 <h1>Lesson 71</h1>
-<h2>Variables are awesome!</h2>
+<h2>Deep look at contains_prime()</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
+<p>Okay coder, let's look closely at the code from the last lesson. 
+    <b>Remember, there is always more than one way to solve a programming problem! This is one possiblilty.</b>
 </p>
+
 <div class="mt-3 mb-3 ml-5">
     <code>
-        result = 5 * 16<br>
-        print(result)
+        <span class="card-1 highlight-code">def contains_prime(num_list):<br></span>
+        <span class="card-2">&nbsp;&nbsp;for num in num_list:<br></span>
+        <span class="card-3">&nbsp;&nbsp;&nbsp;&nbsp;for i in range(2,num):<br></span>
+        <span class="card-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num % i == 0:<br></span>
+        <span class="card-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br></span>
+        <span class="card-6">&nbsp;&nbsp;&nbsp;&nbsp;else:<br></span>
+        <span class="card-7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num != 1:<br></span>
+        <span class="card-8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return f"Contains at least one prime! ({num})"<br></span>
+        <span class="card-9">&nbsp;&nbsp;return "No primes found in list."<br></span>
     </code>
 </div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+
+
+<div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active card bg-info highlight-code" id="card-1">
+            <!-- first slide -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">1 / 9</h5>
+                        <p class="card-text">
+                            We <b>define the function with the def keyword.</b> Inside the <b>parentheses</b> we provide a <b>parameter</b>
+                            called <b>num_list</b> to accept a <b>list</b> of numbers as an <b>argument</b> when we <b>call the function</b>. 
+                        </p>
+                    </div>
+                </div>
+            
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-2">
+            <!-- second slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">2 / 9</h5>
+                        <p class="card-text">
+                            On the second line of the <b>function</b> we use <b>indentation</b> to start the body of the <b>function</b>, 
+                            which is the code that will run when we <b>call the function</b>. The first line of code in the body of the <b>function</b> 
+                            is a <b>for loop</b>. We declare a variable <b>num</b> for each number in <b>num_list</b>. Each <b>iteration</b> through 
+                            the <b>loop</b>, <b>num</b> will hold the current number from <b>num_list</b>. 
+                        </p>
+                    </div>
+                </div>
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-3">
+            <!-- third slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">3 / 9</h5>
+                        <p class="card-text">
+                            Inside of the <b>for loop</b>, we code another <b>for loop.</b> This is a common technique called <b>nesting</b>. 
+                            We can <b>nest</b> <b>loops</b>, <b>if statements</b>, and even <b>functions</b>.
+                            <b>Nesting</b> just means to write a <b>loop within a loop</b> or an <b>if statement within an if statement</b>. 
+                            This second <b>for loop</b> allows us to do something amazing. <em>For each number in <b>num_list</b>,</em> we are going to create 
+                            a <b>range()</b> from 2 up to (but not including) the current number from <b>num_list</b>. This means if the first number in <b>num_list</b> 
+                            is 7 we will <b>loop</b> through the numbers 2, 3, 4, 5, and 6, one by one, and for each number, run the code in this <b>nested for loop</b>. 
+                        </p>
+                    </div>
+                </div>
+          </div>
+          <div class="carousel-item card bg-info highlight-code" id="card-4">
+            <!-- fourth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">4 / 9</h5>
+                        <p class="card-text">
+                            Once inside this inner <b>for loop</b>, we will be checking if the current number from <b>num_list</b> is evenly divisible 
+                            by <b>i</b> (the current number from the <b>nested for loop</b>). 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-5">
+            <!-- fifth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">5 / 9</h5>
+                        <p class="card-text">
+                            If this is <b>True</b>, that means 
+                            the number has this number as a factor, <em>which means it is not prime!</em> As soon as we know the 
+                            number is not prime we <b>break</b> out of the <b>nested for loop</b>, and flow of the program 
+                            returns to the outer <b>for loop</b>. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-6">
+            <!-- sixth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">6 / 9</h5>
+                        <p class="card-text">
+                            We move on to the next number in <b>num_list</b>. 
+                            The <b>else clause</b> on the <b>nested, inner for loop</b> runs only if the <b>inner, nested loop</b> runs all the 
+                            way to completion without a <b>break</b> statement being <b>evaluated</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-7">
+            <!-- seventh slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">7 / 9</h5>
+                        <p class="card-text">
+                            In the <b>else clause</b> for the <b>inner, nested loop</b>, we need to make sure we are not allowing the number <b>1</b> to 
+                            be detected as prime. By math definition, the number <b>1</b> is not prime. So, <b>if</b> the current 
+                            number from <b>num_list (num) is not equal to 1</b> we know we have found a prime number. We looped 
+                            through every possible number between 2 and the number itself and found no factors. Therefore, the number is prime. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-8">
+            <!-- eighth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">8 / 9</h5>
+                        <p class="card-text">
+                            At this point we <b>return</b> an <b>f-string</b> from the <b>function</b>. The returned string is formatted to display 
+                            the prime number, so we know which prime was found.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item card bg-info highlight-code" id="card-9">
+            <!-- ninth slide -->
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">9 / 9</h5>
+                        <p class="card-text">
+                            If this doesn't happen for any number in <b>num_list</b> we know that no primes were 
+                            found so we <b>return</b> a string saying no numbers in <b>num_list</b> are prime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon">Prev</span>
+        </a>
+            
+        <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon">Next</span>
+        </a>
+    </div>
 
 <input type="hidden" id="lesson_number" value="71">
