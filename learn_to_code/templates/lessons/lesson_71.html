@@ -71,7 +71,7 @@
                     <div class="card-body">
                         <h5 class="card-title">4 / 9</h5>
                         <p class="card-text">
-                            Once inside this inner <b>for loop</b>, we will be checking if the current number from <b>num_list</b> is evenly divisible 
+                            Once inside this inner <b>for loop</b>, we will be checking if <b>num</b> (the current number from <b>num_list</b>) is evenly divisible 
                             by <b>i</b> (the current number from the <b>nested for loop</b>). 
                         </p>
                     </div>
@@ -83,10 +83,10 @@
                     <div class="card-body">
                         <h5 class="card-title">5 / 9</h5>
                         <p class="card-text">
-                            If this is <b>True</b>, that means 
-                            the number has this number as a factor, <em>which means it is not prime!</em> As soon as we know the 
-                            number is not prime we <b>break</b> out of the <b>nested for loop</b>, and flow of the program 
-                            returns to the outer <b>for loop</b>. 
+                            If <b>num % i == 0:</b> is <b>True</b>, that means 
+                            that <b>num</b> has <b>i</b> as a factor, <em>which means <b>num</b> is not prime!</em> As soon as we know that 
+                            <b>num</b> is NOT prime we <b>break</b> out of the <b>nested for loop</b>, and flow of the program 
+                            returns to the outer <b>for loop</b>, and we move on to the next number in <b>num_list</b>.  
                         </p>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
                     <div class="card-body">
                         <h5 class="card-title">6 / 9</h5>
                         <p class="card-text">
-                            We move on to the next number in <b>num_list</b>. 
                             The <b>else clause</b> on the <b>nested, inner for loop</b> runs only if the <b>inner, nested loop</b> runs all the 
-                            way to completion without a <b>break</b> statement being <b>evaluated</b>.
+                            way to completion without a <b>break</b> statement being <b>executed</b>. 
+                            This means no factors were found for <b>num</b> and it must be prime!
                         </p>
                     </div>
                 </div>
