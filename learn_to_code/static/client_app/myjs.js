@@ -39,4 +39,7 @@ $(document).ready(function(){
         $('#help_message').removeClass('hide_me');
         $('#help_button').addClass('hide_me');
     });
+
+    var clipboard = new ClipboardJS('.copy-to-clip');
+
 })

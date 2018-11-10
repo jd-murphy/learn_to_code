@@ -29,7 +29,7 @@
 
                 <div class="mt-3 mb-3 ml-5 collapse" id="code-toggle">
                     <div class="card card-body">
-                        <code>
+                        <code id="copy-code">
                             even_entries = []<br>
                             entry = input("Enter a number: (Press enter twice to quit) ")<br>
                             while entry:<br>
@@ -41,6 +41,9 @@
                             print(even_entries)
                         </code>
                     </div>
+                    <button class="copy-to-clip btn btn-link" data-clipboard-target="#copy-code">
+                        Copy Code
+                    </button>
                 </div>
 
             </div>
