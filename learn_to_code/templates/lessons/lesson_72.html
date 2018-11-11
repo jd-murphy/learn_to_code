@@ -1,25 +1,258 @@
 <h1>Lesson 72</h1>
-<h2>Variables are awesome!</h2>
+<h2>Making a list of primes</h2>
 
-<p>Okay coder, we've seen how
-     to do some math, but most of the time 
-    we won't be doing math inside a <b>print()</b> statement. 
-    How can we do math outside a <b>print()</b> statement 
-    and still see the result? Well my friend, the magic is in <b>variables</b>!
-    Python uses variables to store information. Try this 
-</p>
 <div class="mt-3 mb-3 ml-5">
-    <code>
-        result = 5 * 16<br>
-        print(result)
-    </code>
-</div>
-<p>Don't use quotes <b>" "</b>, just print out the variable 
-    named <b>result</b>. Look in the console and you'll see the magic!</p> 
-<div class="mt-3 mb-3 ml-5">
-    <code>80</code>
-</div>
-<p>Variables are amazing and we'll learn a lot more about them soon. For now, try storing 
-    <b>19 plus 17</b> and then <b>5 minus 17</b> in <b>result</b>. Make sure to <b>print(result)</b> to see your answers!</p>
+        <code>
 
+            <span class="card-3">def is_prime(num):<br></span>
+            <span class="card-4">&nbsp;&nbsp;for i in range(2, num):<br></span>
+            <span class="card-5">&nbsp;&nbsp;&nbsp;&nbsp;if num % i == 0:<br></span>
+            <span class="card-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return False<br></span>
+            <span class="card-6">&nbsp;&nbsp;return True<br></span>
+            <br>
+            <span class="card-7">def create_prime_list(count):<br></span>
+            <span class="card-8">&nbsp;&nbsp;primes = []<br></span>
+            <span class="card-9">&nbsp;&nbsp;for i in range(count):<br></span> 
+            <span class="card-9">&nbsp;&nbsp;&nbsp;&nbsp;primes.append(2+i)<br></span>
+            <span class="card-10">&nbsp;&nbsp;for j in range(len(primes)):<br></span>
+            <span class="card-11">&nbsp;&nbsp;&nbsp;&nbsp;while not is_prime(primes[j]):<br></span>
+            <span class="card-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for k in range(j,len(primes)):<br></span>
+            <span class="card-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primes[k] +=1 <br></span>
+            <span class="card-13">&nbsp;&nbsp;return primes<br></span>
+            <br>
+            <span class="card-14">print(create_prime_list(20))<br></span>
+        </code>
+    </div>
+    
+    
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active card bg-info highlight-code" id="card-1">
+                <!-- first slide -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">1 / 15</h5>
+                            <p class="card-text">
+                                Okay coder, let's try another exercise with primes. 
+                                We'll write a program to create a <b>list</b> of prime numbers and <b>return</b> it to the user.
+                                Let's create it so the user can choose how many prime numbers they want.
+                                For example, if the user enters 6 we will create and <b>return</b> to them a <b>list</b> of the 
+                                first 6 prime numbers: 2, 3, 5, 7, 11, and 13.
+                                
+                            </p>
+                        </div>
+                    </div>
+                
+              </div>
+              <div class="carousel-item card bg-info highlight-code" id="card-2">
+                <!-- second slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">2 / 15</h5>
+                            <p class="card-text">
+                                We will write two <b>functions</b>, the first will be a helper <b>function</b> to check if a number is prime. 
+                                The second will create the <b>list</b> of primes. It will ask the helper <b>function</b> for assistance.
+                            </p>
+                        </div>
+                    </div>
+              </div>
+              <div class="carousel-item card bg-info highlight-code" id="card-3">
+                <!-- third slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">3 / 15</h5>
+                            <p class="card-text">
+                                First we <b>define is_prime()</b> with the <b>def keyword</b>.
+                                We give it a <b>parameter</b> named <b>num</b> to hold our <b>argument</b> 
+                                when we call the <b>function</b>. This will hold the number we want to check.
+                            </p>
+                        </div>
+                    </div>
+              </div>
+              <div class="carousel-item card bg-info highlight-code" id="card-4">
+                <!-- fourth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">4 / 15</h5>
+                            <p class="card-text">
+                                Inside of <b>is_prime()</b> should be very familiar.
+                                We loop through a <b>range()</b> from 2 up to (but not including) 
+                                the number we want to check. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-5">
+                <!-- fifth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">5 / 15</h5>
+                            <p class="card-text">
+                               For each number in our <b>range()</b> we ask <b>if num % i == 0</b>. We are 
+                               asking if the number is evenly divisible by each number. We use the modulo <b>% operator</b>.
+                               If this is <b>True</b> we <b>return False</b> because this number is not prime.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-6">
+                <!-- sixth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">6 / 15</h5>
+                            <p class="card-text">
+                                If we get all the way through the numbers between 2 and our number and have not 
+                                found a number that divides evenly, we know the number has no factors aside from 1 and itself.
+                                Therefore, the number is prime. We <b>return True.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-7">
+                <!-- seventh slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">7 / 15</h5>
+                            <p class="card-text">
+                                Next we <b>define create_prime_list()</b> with the <b>def keyword</b> and define the 
+                                <b>parameter count</b>. This will take user input as an <b>argument</b>. 
+                                This number will tell us how many primes we need to put in our <b>list</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-8">
+                <!-- eighth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">8 / 15</h5>
+                            <p class="card-text">
+                                We <b>declare</b> and <b>initialize an empty list: primes</b>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-9">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">9 / 15</h5>
+                            <p class="card-text">
+                                We <b>loop</b> through a <b>range()</b> the size of the 
+                                <b>parameter count</b>  which holds an <b>argument</b> given 
+                                by our user. We add a placeholder value into our <b>list primes</b>, 
+                                starting with 2 and increasing it by one each number through the range.
+                                If you <b>print()</b> out <b>primes</b> at this point you will see it
+                                is [2,3,4,5,6... (containting <em><b>count</b></em> values)]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-10">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">10 / 15</h5>
+                            <p class="card-text">
+                                Now we use a <b>range()</b> the length of <b>primes</b> 
+                                to <b>loop</b> through <b>primes</b>. We use <b>j</b> as an <b>index</b> 
+                                to access each <b>element</b> in <b>primes</b> like so: <b>primes[j]</b> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-11">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">11 / 15</h5>
+                            <p class="card-text">
+                                
+                                We create a <b>while loop</b> to check each number in 
+                                <b>primes</b>: the <b>condition - while primes[j] is not prime</b> 
+                                is <b>evaluated</b> by <b>calling</b> the <b>is_prime() function</b> we 
+                                wrote earlier. It <b>returns True</b> if the number is prime and <b>False</b> if 
+                                the number is not prime. We <b>loop</b> until the number is prime. 
+                                The <b>not keyword</b> <em>negates</em> the <b>return value</b> from <b>is_prime()</b> 
+                                so our <b>loop</b> continues until <b>is_prime() returns True</b>.
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-12">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">12 / 15</h5>
+                            <p class="card-text">
+                                Inside this <b>while loop</b> <em>(while the current number is not prime)</em> 
+                                we use a <b>range()</b> to <b>loop</b> through and increase the current number 
+                                and every future number in the list. 
+                                We check the current number again to see if it is prime yet.
+                                
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-13">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">13 / 15</h5>
+                            <p class="card-text">
+                                
+                                The above <b>loops</b> repeat until every number in <b>primes</b> is truly a prime number.
+                                We can now <b>return</b> our list <b>primes</b>.
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-14">
+                    <!-- ninth slide -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">14 / 15</h5>
+                            <p class="card-text">
+                                The <b>function is called</b> with an <b>argument</b>.
+                                Try running this function with different arguments to better understand how it works.
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item card bg-info highlight-code" id="card-15">
+                <!-- ninth slide -->
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">15 / 15</h5>
+                            <p class="card-text">
+                                
+                                This code is fairly complex but I think if you take your 
+                                time are go through this code carefully line by line, 
+                                you'll be comfortable with it in no time. Programming is not easy. 
+                                Solving these kinds of problems is no simple task. 
+                                You are well on your way to mastering python. Keep up the momentum! 
+                                You're doing great, coder!
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon">Prev</span>
+            </a>
+                
+            <a class="btn btn-link" href="#carouselIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon">Next</span>
+            </a>
+        </div>
+    
 <input type="hidden" id="lesson_number" value="72">
