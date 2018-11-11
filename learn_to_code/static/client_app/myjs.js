@@ -69,4 +69,8 @@ $(document).ready(function(){
 
       $("#unique-id > div").addClass(next_effect);
       $("#congrats-msg").text(next_message);
+
+
+
+      $("#modal-iframe").iziModal();
 })
