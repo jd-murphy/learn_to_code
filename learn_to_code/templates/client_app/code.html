@@ -33,7 +33,7 @@
                             {% if lesson_number != last_lesson %}
                                 <a class="btn btn-outline-info animated " href="{% url 'client_app:client_code' %}" id="next_lesson_btn">&nbsp;&nbsp;Next ></a>
                             {% else %}
-                            <a class="btn btn-outline-info" href="{% url 'client_app:client_lessons' %}">&nbsp;&nbsp;More lessons coming soon!</a>
+                            <a class="btn btn-outline-info" href="{% url 'client_app:client_lessons' %}">More lessons soon!</a>
                             {% endif %}
                         
                     </div>

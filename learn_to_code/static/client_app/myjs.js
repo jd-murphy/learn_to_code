@@ -61,6 +61,12 @@ $(document).ready(function(){
           $('#next_lesson_btn').addClass('rubberBand')
       })
 
+      effects = ["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "jello", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "flip", "flipInX", "flipInY", "lightSpeedIn", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "slideInUp", "slideInDown", "slideInLeft", "slideInRight", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "jackInTheBox", "rollIn"]
+      congrats_message = ["Great job, Coder!", "Keep it up, coder!", "Amazing work, coder!", "Nice! Stay focused, coder!", "Excellent work, coder!", "Great. Your skills are top notch!", "Great job! You're learning so much!", "Spot on. Keep it up, coder!", "#winning #awesomejob", "Very nice. Good work, coder.", "Great job. Keep up the momentum, coder!", "Nice work. You're doing great, coder.", "Really nice job. Keep on keepin' on, coder!", "I knew you would do great!", "Hard work pays off. You're learning so fast!", "Good stuff. Keep it up, coder!", "Amazing work, coder!", "Very nice. Keep up the hard work, coder.", "Awesome job out there!", "Top notch, coder! Good job!", "Nice skills, coder! Keep it up.", "You're doing great!", "Very nice. Good work!", "Awesome! Great work.", "Very nice. Stay focused.", "Your skills are improving!", "You make me proud coder!", "You're reallly getting the hang of this!", "Very nice. Proud of you!", "Good stuff. Very impressive.", "Excellent work.", "You've got what it takes!", "Impressive work again, coder.", "You're writing great code. Keep it up!", "Nice. Perserverance pays off!", "It's not easy, but you make it look easy!", "Great work.", "Wow! Your skills are impressive.", "You'll master python in no time.", "Your coding prowess is impressive. Nice job.", "What an accomplishment! Awesome work!", "Very nice! You're quite talented.", "Very nice work, coder. Very nice.", "Impressive work, coder!", "Great momentum. Stay on it! You're doing great!", "Top notch skills you've got there, coder!", "Excellent job, coder.", "Amazing work, coder."]
+    
+      next_effect = effects[Math.floor(Math.random()*effects.length)]
+      next_message = congrats_message[Math.floor(Math.random()*congrats_message.length)]
 
-  
+      $("#unique-id > div").addClass(next_effect);
+      $("#congrats-msg").text(next_message);
 })
