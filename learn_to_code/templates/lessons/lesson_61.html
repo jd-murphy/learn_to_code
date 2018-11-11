@@ -1,9 +1,6 @@
 <h1>Lesson 61</h1>
 <h2>Santa's list code review</h2>
 
-<p>Okay coder, That was a lot, let's review the code for Santa's list from the last lesson! 
-</p>
-
 <div class="mt-3 mb-3 ml-5">
     <code>
         <span class="card-1 highlight-code">nice_list = []<br></span>
@@ -19,15 +16,13 @@
         <span class="card-8">&nbsp;&nbsp;&nbsp;&nbsp;print("Try adding the child again.") <br></span>
         <span class="card-9">&nbsp;&nbsp;child = input("Add a child: (press enter twice to quit) ") <br></span>
         <span class="card-9">&nbsp;&nbsp;destination = input("Which list? ") <br></span>
+        <br>
         <span class="card-10">print("nice_list")<br></span>
         <span class="card-10">print(nice_list)<br></span>
         <span class="card-10">print("naughty_list")<br></span>
         <span class="card-10">print(naughty_list)</span>
-    </code>
-</div>
-
-
-
+    </div>
+</code>
 
 <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner">
@@ -160,39 +155,5 @@
           <span class="carousel-control-next-icon">Next</span>
         </a>
     </div>
-
-<!-- 
-
-
-First, we <b>declare</b> and <b>initialize</b> two empty <b>lists</b>. One for nice children, and one for naughty children.
-
-Then we start getting <b>input()</b> from the user. We ask for a child's name and which list they should go on. 
-
-We start a <b>while loop</b> to continue asking for names until the user is finished. The condition controlling the <b>loop</b> 
-is that the user must enter some value for the child's name and the destination <b>list</b>. 
-If the variables are empty, the <b>loop</b> will exit.
-
-We convert the string in the variable <b>destination</b> to lowercase 
-and compare it to the string <b>'nice'</b>. 
-
-If the comparison is <b>True</b>, we will <b>.append()</b> the 
-child to the <b>nice_list</b>. 
-
-If the child is not destined for the <b>nice_list</b>, 
-we check if they are headed to the <b>naughty_list</b> in the <b>elif</b> clause. We convert the string in the variable <b>destination</b> to lowercase 
-and compare it to the string <b>'naughty'</b>.
-
-If the comparison is <b>True</b>, we will <b>.append()</b> the 
-child to the <b>naughty_list</b>. 
-
-If the user typed a string that doesn't match <b>'naughty'</b> or <b>'nice'</b>, 
-we ask them to enter the child's information again. 
-
-We repeat the process until the user is finished entering names.
-
-
-When the user is done they can press <b>enter</b> twice without entering a child's info, and the program will exit the <b>loop</b>
- and print out the resulting <b>lists</b>.
- -->
 
 <input type="hidden" id="lesson_number" value="61">
