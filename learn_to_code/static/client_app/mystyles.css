@@ -53,3 +53,13 @@ img {
 .highlight-code {
     background-color: rgba(0,0,0,.1);
 }
+
+.congrats {
+    color: white;
+    text-align: center;
+}
+
+#next_lesson_btn {
+    animation-delay: .5s;
+    animation-iteration-count: 2;
+}

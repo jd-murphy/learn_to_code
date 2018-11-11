@@ -17,6 +17,12 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'client_app/minty.css' %}">
     <link rel="stylesheet" href="{% static 'client_app/mystyles.css' %}">
+    <link rel="stylesheet" href="{% static 'client_app/custombox.min.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <link rel="stylesheet" href="{% static 'client_app/light-modal.min.css' %}">
+    
 
     {% block title_block %}
     {% endblock %}
@@ -69,10 +75,45 @@
       {% endblock %}
 
 
+
+
+
+
+
+
+
+
+
+
+      <div class="light-modal" id="unique-id" role="dialog" aria-labelledby="light-modal-label" aria-hidden="false">
+        <div class="light-modal-content animated rubberBand">
+            <!-- light modal header -->
+            <div class="light-modal-header">
+                <a href="#" id="close-modal" class="light-modal-close-icon" aria-label="close">&times;</a>
+            </div>
+            <!-- light modal body -->
+            <div class="light-modal-body">
+                <!-- Your content -->
+                <h1 class="congrats"> 🎉 Congrats! 🎉 </h1>
+                <h3 class="congrats">Great work, coder!</h3>
+            </div>
+            
+            
+        </div>
+      </div>
+
+
+
+
+
+
+
+
       <footer class="footer mt-5">
         <div class="row">
           <div class="col">
-            <p>This website is built with Python and the Django framework.</p>
+            <p>This website was built by Jordan Murphy with Python and the Django framework.</p>
+            <p>Jordan Murphy 2018</p>
           </div>
         </div>
       </footer>
@@ -84,9 +125,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="{% static 'client_app/custombox.min.js' %}"></script>
+
     {% block custom_script %}
     {% endblock %}
+
+
+
+
     
   </body>
 </html>

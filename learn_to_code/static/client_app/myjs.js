@@ -12,6 +12,9 @@ $(document).ready(function(){
         this.href += previous_lesson
     });
 
+    
+  
+
     $('#success_button').click(function(){
         console.log("sending ajax...");
         var csrftoken = Cookies.get('csrftoken');
@@ -32,6 +35,7 @@ $(document).ready(function(){
             $('#success_message').removeClass('hide_me');
             $('#help_message').addClass('hide_me');
             console.log('Lesson ' + lesson_number + ' marked as complete!')
+            
         });
     });
 
@@ -52,4 +56,11 @@ $(document).ready(function(){
         $('.' + e.relatedTarget.id).addClass("highlight-code")
       });
       
+
+      $("#close-modal").click(function(){
+          $('#next_lesson_btn').addClass('rubberBand')
+      })
+
+
+  
 })
